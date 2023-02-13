@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        body {
+            margin: 0px;
+            font-family: 'segoe ui';
+        }
+
+        /* START GRID */
+        .container {
+            padding: 0;
+            display: grid; 
+            grid-template-columns: repeat(4, 1fr); 
+            grid-template-rows: 1fr repeat(4, 10fr) 1.1fr;
+            grid-template-areas: 
+            "navbar navbar navbar navbar"
+            "first-section first-section first-section first-section"
+            "seconde-section seconde-section seconde-section seconde-section"
+            "third-section third-section third-section third-section"
+            "fourth-section fourth-section fourth-section fourth-section"
+            "footer footer footer footer"; 
+        }
+        
+        .navbar { 
+            grid-area: navbar;
+            color: white;
+            background-color: black;
+        }
+        
+        .first-section { 
+            grid-area: first-section;
+            background-color: aquamarine;
+        }
+        
+        .seconde-section { 
+            grid-area: seconde-section;
+            background-color: burlywood;
+        }
+
+        .third-section { 
+            grid-area: third-section;
+            background-color: cornflowerblue;
+        }
+
+        .fourth-section { 
+            grid-area: fourth-section;
+            background-color: hotpink;
+        }
+        
+        .footer { 
+            grid-area: footer;
+            background-color: darkgray;
+        }
+        /* END GRID */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar center">
+            <p>Navbar</p>
+        </div>
+
+        <div class="first-section center">
+            <p>First section</p>
+        </div>
+
+        <div class="seconde-section center">
+            <p>Seconde section</p>
+        </div>
+        
+        <div class="third-section center">
+            <p>Third section</p>
+        </div>
+
+        <div class="fourth-section center">
+            <p>Fourth section</p>
+        </div>
+
+        <div class="footer center">
+            <p>Footer</p>
+        </div>
+    </div>
+</body>
+</html>
